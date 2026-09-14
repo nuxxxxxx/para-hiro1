@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Hiro ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         PANTALLA INICIAL
+    ========================== -->
+    <section id="inicio" class="screen active">
+
+        <div class="hud">
+            <span>PLAYER 01</span>
+            <span>LOVE.exe</span>
+        </div>
+
+        <div class="inicio-box">
+
+            <div class="pixel-heart">♥</div>
+
+            <p class="small-text">[ MENSAJE ESPECIAL DETECTADO ]</p>
+
+            <h1>HIRO</h1>
+
+            <h2>💜 TENGO ALGO PARA TI 💚</h2>
+
+            <p>
+                Preparé esta pequeña página con mucho cariño
+                y quiero preguntarte algo...
+            </p>
+
+            <p class="question">
+                ¿Quieres leer lo que hice para ti?
+            </p>
+
+            <div class="buttons">
+                <button onclick="irCarta()">SÍ 💜</button>
+                <button id="noBtn" onclick="decirNo()">NO 😭</button>
+            </div>
+
+            <p id="noMessage" class="hidden"></p>
+
+        </div>
+
+        <img src="1.gif" class="floating-gif" alt="GIF">
+
+    </section>
+
+
+    <!-- =========================
+         INTRO ANTES DE LA CARTA
+    ========================== -->
+    <section id="introCarta" class="screen">
+
+        <div class="hud">
+            <span>MISSION START</span>
+            <span>01 / ???</span>
+        </div>
+
+        <div class="intro-box">
+
+            <div class="loading-heart">♥</div>
+
+            <h1>OK... 💜</h1>
+
+            <p>
+                Entonces prepárate porque todo esto lo hice
+                con muchísimo cariño para ti.
+            </p>
+
+            <p>
+                Puede que haya demasiadas palabras...
+                pero es que contigo nunca parecen suficientes.
+            </p>
+
+            <button onclick="empezarCarta()">
+                ABRIR LA CARTA 💌
+            </button>
+
+        </div>
+
+        <img src="gif gato bailando.gif" class="side-gif" alt="GIF">
+
+    </section>
+
+
+    <!-- =========================
+         CARTA
+    ========================== -->
+    <section id="carta" class="screen">
+
+        <div class="hud">
+            <span>HIRO.exe</span>
+            <span id="pageCounter">01 / 14</span>
+        </div>
+
+        <div class="letter-container">
+
+            <div class="letter-card">
+
+                <div class="letter-header">
+                    <span>💾 LOVE FILE</span>
+                    <span>♥</span>
+                </div>
+
+                <div id="letterContent"></div>
+
+                <div class="letter-gif-container">
+                    <img id="letterGif" src="22.gif"class="side-gif" alt="GIF">
+                </div>
+
+                <div class="letter-navigation">
+
+                    <button id="prevBtn" onclick="paginaAnterior()">
+                        ◀ ANTERIOR
+                    </button>
+
+                    <span id="pageDots"></span>
+
+                    <button id="nextBtn" onclick="paginaSiguiente()">
+                        SIGUIENTE ▶
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MINI PUZZLE
+    ========================== -->
+    <section id="juego" class="screen">
+
+        <div class="hud">
+            <span>MINI GAME</span>
+            <span>LEVEL 01</span>
+        </div>
+
+        <div class="game-box">
+
+            <p class="small-text">[ SIDE QUEST UNLOCKED ]</p>
+
+            <h1>💾 RECONSTRUYE EL MENSAJE</h1>
+
+            <p>
+                Parece que algunos fragmentos del archivo
+                se desordenaron...
+            </p>
+
+            <p>
+                Ordénalos para desbloquear el siguiente nivel. 👀
+            </p>
+
+            <div id="puzzle" class="puzzle"></div>
+
+            <p id="moves" class="moves">
+                Movimientos: 0
+            </p>
+
+            <p id="gameMessage" class="game-message"></p>
+
+            <button id="restartPuzzle" onclick="crearPuzzle()">
+                REINICIAR 🔄
+            </button>
+
+        </div>
+
+        <img src="Cats Love To Give Kisses Too (10 Gifs).gif" class="game-gif" alt="GIF">
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================== -->
+    <section id="final" class="screen">
+
+        <div class="hud">
+            <span>MISSION COMPLETE</span>
+            <span>♥ ♥ ♥</span>
+        </div>
+
+        <div class="final-box">
+
+            <div class="big-heart">♥</div>
+
+            <h1>LO LOGRASTE 🎮</h1>
+
+            <p>
+                Sabía que podías hacerlo JAJAJA. 😭
+            </p>
+
+            <p>
+                Y ahora que terminaste...
+                todavía me queda una última cosa que decirte.
+            </p>
+
+            <h2>
+                Te quiero muchísimo, Hiro. ❤️
+            </h2>
+
+            <button onclick="mostrarBonus()">
+                DESBLOQUEAR BONUS ✨
+            </button>
+
+        </div>
+
+        <img src="fianldelbueno.gif".jpg" class="floating-gif" alt="GIF">
+
+    </section>
+
+
+    <!-- =========================
+         BONUS
+    ========================== -->
+    <section id="bonus" class="screen">
+
+        <div class="hud">
+            <span>BONUS CONTENT</span>
+            <span>UNLOCKED</span>
+        </div>
+
+        <div class="bonus-box">
+
+            <h1>🎧 BONUS PARA TI</h1>
+
+            <p>
+                Porque obviamente una carta así necesitaba
+                soundtrack. JAJAJA.
+            </p>
+
+            <div class="spotify-container">
+
+               <iframe 
+    src="https://open.spotify.com/embed/playlist/3KTXio5xTzuoSSevK0aW3X"
+    width="100%"
+    height="352"
+    frameborder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+</iframe>
+
+            </div>
+
+            <h2>📸 ALGUNAS FOTOS</h2>
+
+            <div class="photo-grid">
+
+                <div class="photo-card">
+                    <img src="309.jpeg" alt="Foto">
+                </div>
+
+                <div class="photo-card">
+                    <img src="meandhe.jpg" alt="Foto">
+                </div>
+
+                <div class="photo-card">
+                    <img src="1111.jpeg" alt="Foto">
+                </div>
+
+            </div>
+
+            <p class="final-message">
+                Gracias por existir y por formar parte de mi vida. ❤️
+            </p>
+
+            <img src="gif_bonus1.gif" class="bonus-gif" alt="GIF">
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
